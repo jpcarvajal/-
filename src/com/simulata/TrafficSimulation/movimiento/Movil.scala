@@ -1,6 +1,6 @@
-package com.simulata.TrafficSimulation.movimiento
+package movimiento
 
-import com.simulata.TrafficSimulation.cartesiano._
+import cartesiano._
 
 abstract class Movil (private var _posicion: Punto, private var _velocidad: Velocidad) {
   

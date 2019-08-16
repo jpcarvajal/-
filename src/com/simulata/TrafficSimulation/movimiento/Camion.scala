@@ -1,21 +1,14 @@
-package com.simulata.TrafficSimulation.movimiento
+package movimiento
 
-import java.awt.Color
+import cartesiano._
 
-import com.simulata.TrafficSimulation.cartesiano._
-import com.simulata.TrafficSimulation.vias._
+import vias._
 
 //falta definir el modelo para representarlos*****/
 
 //para poner los get y los set se debe de copiar todo el código, no vi como dejarlo en vehículo
 
-class Camion (val pl:String,
-              val o:Interseccion,
-              val d:Interseccion,
-              private var _v:Velocidad,
-              val c: Color = Color.WHITE,
-              val figura: java.awt.geom.Rectangle2D.Double = new java.awt.geom.Rectangle2D.Double(0,0, 10,10))
-  extends Vehiculo(pl, o, d, _v, c, figura){
+class Camion (val pl:String, val o:Interseccion, val d:Interseccion, private var _v:Velocidad/*,val color:??, val figura:??*/) extends Vehiculo(pl, o, d, _v){
   
    private var _p:Punto=o
 
@@ -28,9 +21,6 @@ class Camion (val pl:String,
   def v_=(v:Velocidad):Unit = _v = v
   //Indica el ángulo que deberá seguir entre el origen y la primer intersección de la ruta
   if (ruta.length>1) actualizarAngulo(o,ruta(1),Velocidad.kphTomps(v))  
-  
-//Indica el ángulo que deberá seguir entre el origen y la primer intersección de la ruta
-  if (ruta.length>1) actualizarAngulo(o,ruta(1),v)  
   
   def mover(dt:Double):Unit={
     //se verifica que aún no se haya llegado a la via final

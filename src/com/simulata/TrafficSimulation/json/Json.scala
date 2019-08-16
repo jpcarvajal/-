@@ -1,4 +1,4 @@
-package com.simulata.TrafficSimulation.json
+package json
 
 import java.io._
 import scala.io.Source

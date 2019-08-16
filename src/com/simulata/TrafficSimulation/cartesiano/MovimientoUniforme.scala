@@ -1,4 +1,4 @@
-package com.simulata.TrafficSimulation.cartesiano
+package cartesiano
 
 trait MovimientoUniforme {
   

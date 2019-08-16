@@ -1,6 +1,6 @@
 
 
-package com.simulata.TrafficSimulation.cartesiano
+package cartesiano
 
 //Los angulos están definidos en grados
 

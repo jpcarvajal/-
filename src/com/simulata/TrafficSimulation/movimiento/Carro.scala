@@ -1,21 +1,14 @@
-package com.simulata.TrafficSimulation.movimiento
+package movimiento
 
-import java.awt.Color
+import cartesiano._
 
-import com.simulata.TrafficSimulation.cartesiano._
-import com.simulata.TrafficSimulation.vias._
+import vias._
 
 //falta definir el modelo para representarlos*****/
 
 //para poner los get y los set se debe de copiar todo el código, no vi como dejarlo en vehículo
 
-class Carro (val pl:String,
-             val o:Interseccion,
-             val d:Interseccion,
-             private var _v:Velocidad,
-             val c : Color = Color.WHITE,
-             val figura: java.awt.geom.Rectangle2D.Double = new java.awt.geom.Rectangle2D.Double(0,0,3,7))
-  extends Vehiculo(pl, o, d, _v, c, figura){
+class Carro (val pl:String, val o:Interseccion, val d:Interseccion, private var _v:Velocidad/*,val color:??, val figura:??*/) extends Vehiculo(pl, o, d, _v){
   
   private var _p:Punto=o
 

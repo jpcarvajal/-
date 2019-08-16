@@ -1,7 +1,7 @@
-package com.simulata.TrafficSimulation.vias
+package vias
 
-import com.simulata.TrafficSimulation.cartesiano.Recta
-import com.simulata.TrafficSimulation.cartesiano.Punto
+import cartesiano.Recta
+import cartesiano.Punto
 
 //no estoy seguro de si poner la velocidad de la via como tipo int o tipo velocidad, creo que
 //es mas facil dejandola tipo Int por como se le mandan los parámetros

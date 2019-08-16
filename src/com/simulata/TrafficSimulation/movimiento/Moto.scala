@@ -1,21 +1,14 @@
-package com.simulata.TrafficSimulation.movimiento
+package movimiento
 
-import java.awt.Color
+import cartesiano._
 
-import com.simulata.TrafficSimulation.cartesiano._
-import com.simulata.TrafficSimulation.vias._
+import vias._
 
 //falta definir el modelo para representarlos*****/
 
 //para poner los get y los set se debe de copiar todo el código, no vi como dejarlo en vehículo
 
-class Moto (val pl:String,
-            val o:Interseccion,
-            val d:Interseccion,
-            private var _v:Velocidad,
-            val c : Color = Color.WHITE,
-            val figura: java.awt.geom.Rectangle2D.Double = new java.awt.geom.Rectangle2D.Double(0,0,1,3))
-  extends Vehiculo(pl, o, d, _v, c, figura){
+class Moto (val pl:String, val o:Interseccion, val d:Interseccion, private var _v:Velocidad/*,val color:??, val figura:??*/) extends Vehiculo(pl, o, d, _v){
   
    private var _p:Punto=o
 
@@ -35,7 +28,6 @@ class Moto (val pl:String,
       //se verifica que la distancia entre el vehículo y la intersección objetivo actual sea mayor que la distancia que se
       //mueve el vehículo en dt, si es menor se corrige poniendo el vehículo en la posición de la intersección objetivo actual
       //y como se alcanzó se actualiza el ángulo y se remueve esta intersección de la ruta
-
       if(Punto.distancia(p, ruta(1))<=Punto.distancia(p,movimiento(dt,Velocidad.kphTomps(v)))){
         actualizarAngulo(ruta(0),ruta(1),Velocidad.kphTomps(v))
         p=Punto(ruta(0).x,ruta(0).y)

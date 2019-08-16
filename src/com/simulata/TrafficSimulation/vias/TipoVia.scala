@@ -1,4 +1,4 @@
-package com.simulata.TrafficSimulation.vias
+package vias
 
 case class TipoVia (val tipo:String) {
   

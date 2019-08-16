@@ -1,6 +1,6 @@
 
 
-package com.simulata.TrafficSimulation.cartesiano
+package cartesiano
 
 case class Punto (val x:Double, val y:Double) {
 }

@@ -1,9 +1,9 @@
-package com.simulata.TrafficSimulation.cartesiano
+package cartesiano
 
 //están como variables por si luego ponen que no es constante la velocidad
 
 
-class Velocidad (private var _magnitud:Double,private var _angulo:Angulo){
+case class Velocidad (private var _magnitud:Double,private var _angulo:Angulo){
   
   def this(magnitud:Double){
     this(magnitud,new Angulo(0))

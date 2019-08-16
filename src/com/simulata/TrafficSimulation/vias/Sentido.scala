@@ -1,6 +1,6 @@
-package com.simulata.TrafficSimulation.vias
+package vias
 
-class Sentido private (val tipo:String) {
+case class Sentido private (tipo:String) {
   
 }
 
